@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM pt.2</title>
+    <style>
+        body{
+            background-color: darkblue;
+            
+        }
+        main{
+            background-color: white;
+            border-radius: 10px;
+            padding: 12px;
+            font: normal 18pt arial;
+        }
+        main>h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Praticando DOM</h1>
+        <p>Alguns testes </p>
+        <p class="toc">Lá vai</p>
+        <div id="msg">Clique aqui</div>
+        <script>
+            var p1 = window.document.getElementsByTagName(`p`)[0]
+            p1.style.color =`red`
+            var d = window.document.getElementById(`msg`)
+            d.style.color = `white`
+            d.style.background = `red`
+            d.innerText = `Carregando...`
+            var t = window.document.querySelector(`p.toc`)
+            t.style.color = `purple`
+        </script>
+    </main>
+</body>
+</html>

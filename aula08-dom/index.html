@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body{
+            background-color: rgb(83, 5, 83);
+            font: normal 18pt arial;
+        }
+        main{
+            background-color: white;
+            width: 600px;
+            border-radius: 10px 10px;
+            padding: 10px;
+        }
+        main>h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Introdução com o DOM</h1>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JAvaScript.</p>
+        <p>Aqui vai o resultado</p>
+        <div id="msg">Clique aqui</div>
+        <script>
+            var p1 = window.document.getElementsByTagName(`p`)[1]
+            p1.style.color = `purple`
+             /*var d = window.document.getElementById(`msg`)
+             d.style.background = `red`
+             d.innerText = `Carregando....`
+             */
+           var d = window.document.querySelector(`div#msg`)
+           d.style.color = `white`
+           d.style.background = `red`
+        </script>
+    </main>
+</body>
+</html>
